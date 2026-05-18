@@ -1,0 +1,29 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node / build (por si más adelante agregas)
+node_modules/
+dist/
+build/
+.cache/
+
+# Logs y temporales
+*.log
+*.tmp
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Archivos del proyecto que no deben subirse
+assets/LEEME.txt

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategy MP — Aprende, Conecta, Crece | Taller Power BI en Vivo</title>
+  <meta name="description" content="Capacitaciones en vivo y cursos grabados de Power BI, Data Science, Desarrollo Web y Gestión de Proyectos. Aprende con un instructor con 18 años en el sector financiero." />
+  <meta name="theme-color" content="#3046E0" />
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top smp-navbar" id="smpNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/logo.jpeg" alt="Strategy MP" height="40" onerror="this.style.display='none'" />
+        <span class="smp-brand-text">STRATEGY <span class="smp-brand-accent">MP</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-smp-primary" href="#registro">Regístrate al taller</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="smp-hero">
+    <div class="smp-hero-bg"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 text-white" data-aos="fade-up">
+          <span class="smp-pill"><i class="bi bi-broadcast-pin"></i> Taller presencial</span>
+          <h1 class="smp-hero-title mt-3">
+            Domina <span class="smp-gradient-text">Power BI</span> desde cero y toma decisiones con datos
+          </h1>
+          <p class="lead opacity-90 mt-3">
+            Aprende a construir dashboards profesionales en una sesión en vivo conmigo,
+            <strong>Mg. Ing. Guillermo Peña</strong> — 18 años en el sector financiero y docente universitario.
+          </p>
+
+          <ul class="smp-hero-bullets mt-4 list-unstyled">
+            <li><i class="bi bi-check2-circle"></i> Conecta tus primeras fuentes de datos (Excel, SQL).</li>
+            <li><i class="bi bi-check2-circle"></i> Modela y limpia con Power Query como un profesional.</li>
+            <li><i class="bi bi-check2-circle"></i> Crea KPIs y dashboards que ejecutivos quieren ver.</li>
+            <li><i class="bi bi-check2-circle"></i> Llévate plantillas y el archivo .pbix de la sesión.</li>
+          </ul>
+
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#registro" class="btn btn-smp-primary btn-lg">
+              <i class="bi bi-pencil-square me-2"></i> Regístrate gratis
+            </a>
+            <a href="cursos.html" class="btn btn-outline-light btn-lg">Ver servicios</a>
+          </div>
+
+          <div class="smp-hero-meta mt-4">
+            <span><i class="bi bi-people-fill"></i> Cupos limitados</span>
+            <span><i class="bi bi-camera-video-fill"></i> Clases presenciales</span>
+            <span><i class="bi bi-award-fill"></i> Constancia de participación</span>
+          </div>
+        </div>
+
+        <div class="col-lg-5" data-aos="fade-left">
+          <div class="smp-card-form" id="registro">
+            <div class="text-center mb-3">
+              <span class="smp-pill smp-pill-light"><i class="bi bi-bar-chart-fill"></i> Próxima sesión</span>
+              <h3 class="mt-2 mb-0">Reserva tu cupo</h3>
+              <p class="text-muted small mb-0">Te enviaremos el enlace a tu correo.</p>
+            </div>
+            <form id="formRegistro" class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="regNombre" class="form-label">Nombres y apellidos</label>
+                <input type="text" class="form-control" id="regNombre" required />
+                <div class="invalid-feedback">Ingresa tu nombre.</div>
+              </div>
+              <div class="mb-3">
+                <label for="regEmail" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="regEmail" required />
+                <div class="invalid-feedback">Ingresa un correo válido.</div>
+              </div>
+              <div class="mb-3">
+                <label for="regCelular" class="form-label">Celular / WhatsApp</label>
+                <input type="tel" class="form-control" id="regCelular" pattern="[0-9 +]{7,15}" required />
+                <div class="invalid-feedback">Ingresa un número válido.</div>
+              </div>
+              <div class="mb-3">
+                <label for="regCiudad" class="form-label">Ciudad</label>
+                <select id="regCiudad" class="form-select" required>
+                  <option value="" selected disabled>Selecciona tu ciudad</option>
+                  <option>Lima</option>
+                  <option>Huancayo</option>
+                  <option>Trujillo</option>
+                  <option>Arequipa</option>
+                  <option>Tacna</option>
+                  <option>Otra ciudad de Perú</option>
+                  <option>Fuera de Perú</option>
+                </select>
+                <div class="invalid-feedback">Selecciona una ciudad.</div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="regAcepta" required />
+                <label class="form-check-label small" for="regAcepta">
+                  Acepto recibir comunicaciones de Strategy MP.
+                </label>
+                <div class="invalid-feedback">Debes aceptar para continuar.</div>
+              </div>
+              <button type="submit" class="btn btn-smp-primary w-100 btn-lg">
+                Reservar mi cupo <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+              <p class="text-center text-muted small mt-3 mb-0">
+                <i class="bi bi-shield-lock"></i> Tus datos están protegidos.
+              </p>
+            </form>
+            <div id="formRegistroOk" class="alert alert-success d-none mt-3" role="alert">
+              ¡Listo! Te contactaremos pronto con los detalles del taller.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="smp-cta-final py-5">
+    <div class="container text-center text-white">
+      <h2 class="smp-h2 text-white">¿Listo para dar el siguiente paso?</h2>
+      <p class="lead opacity-90 mb-4">Reserva tu cupo gratis al taller de Power BI y empieza a tomar decisiones con datos.</p>
+      <a href="#registro" class="btn btn-light btn-lg smp-btn-on-dark">
+        <i class="bi bi-rocket-takeoff me-2"></i> Quiero mi cupo gratis
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="smp-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/img/logo.jpeg" alt="Strategy MP" height="40" onerror="this.style.display='none'" />
+            <span class="smp-brand-text text-white">STRATEGY <span class="smp-brand-accent">MP</span></span>
+          </div>
+          <p class="opacity-75">Aprende — Conecta — Crece. Capacitaciones en vivo y cursos grabados para profesionales que quieren dar el siguiente paso.</p>
+          <div class="smp-socials">
+            <a href="https://www.linkedin.com/in/guillermopenagarcia/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/51964733868" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:guilledu.pg@strategymge.com" aria-label="Correo"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white">Navegación</h6>
+          <ul class="list-unstyled smp-footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cursos.html">Servicios</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white">Contacto</h6>
+          <ul class="list-unstyled smp-footer-links">
+            <li><i class="bi bi-envelope"></i> guilledu.pg@strategymge.com</li>
+            <li><i class="bi bi-phone"></i> (+51) 964 733 868</li>
+            <li><i class="bi bi-globe"></i> strategymge.com</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-white">Newsletter</h6>
+          <p class="opacity-75 small">Recibe tips de datos, web y carrera profesional.</p>
+          <form id="formNewsletter" class="d-flex gap-2">
+            <input type="email" class="form-control" placeholder="tu@correo.com" required />
+            <button class="btn btn-smp-primary" type="submit"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="opacity-25 my-4" />
+      <div class="d-flex justify-content-between flex-wrap gap-2 small opacity-75">
+        <span>© <span id="anioActual">2026</span> Strategy MP — Todos los derechos reservados.</span>
+        <span>Hecho con <i class="bi bi-heart-fill text-danger"></i> en Perú.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/51964733868?text=Hola%20Guillermo%2C%20me%20interesa%20el%20taller%20de%20Power%20BI"
+     target="_blank" rel="noopener" class="smp-whatsapp-fab" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>

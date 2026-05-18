@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Strategy MP</title>
+  <meta name="description" content="Conversemos sobre capacitaciones, consultoría o talleres a medida para tu empresa." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top smp-navbar smp-navbar-solid" id="smpNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/logo.jpeg" alt="Strategy MP" height="40" onerror="this.style.display='none'" />
+        <span class="smp-brand-text">STRATEGY <span class="smp-brand-accent">MP</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cursos.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-smp-primary" href="index.html#registro">Regístrate al taller</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="smp-page-header smp-page-header--sm">
+    <div class="container text-center text-white">
+      <span class="smp-pill"><i class="bi bi-chat-dots"></i> Hablemos</span>
+      <h1 class="smp-hero-title mt-3">Hagamos crecer tu carrera o tu equipo</h1>
+      <p class="lead opacity-90 mx-auto" style="max-width:720px;">
+        Capacitaciones para personas, consultoría in-company y talleres a medida.
+      </p>
+    </div>
+  </header>
+
+  <!-- FORM Y DATOS -->
+  <section class="py-5 py-lg-6">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="smp-card-form smp-card-form--page">
+            <h3 class="mb-3">Cuéntanos en qué podemos ayudarte</h3>
+            <form id="formContacto" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="cNombre" class="form-label">Nombres y apellidos</label>
+                  <input type="text" class="form-control" id="cNombre" required />
+                  <div class="invalid-feedback">Ingresa tu nombre.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cEmail" class="form-label">Correo electrónico</label>
+                  <input type="email" class="form-control" id="cEmail" required />
+                  <div class="invalid-feedback">Ingresa un correo válido.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cCelular" class="form-label">Celular / WhatsApp</label>
+                  <input type="tel" class="form-control" id="cCelular" required />
+                  <div class="invalid-feedback">Ingresa un número válido.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cCiudad" class="form-label">Ciudad</label>
+                  <input type="text" class="form-control" id="cCiudad" required />
+                  <div class="invalid-feedback">Ingresa tu ciudad.</div>
+                </div>
+                <div class="col-12">
+                  <label for="cTipo" class="form-label">¿Sobre qué servicio quieres conversar?</label>
+                  <select id="cTipo" class="form-select" required>
+                    <option value="" selected disabled>Selecciona una opción</option>
+                    <option>Curso-Taller de Power BI</option>
+                    <option>Consultoría en BI &amp; Analítica</option>
+                    <option>App móvil para fuerza de ventas</option>
+                    <option>Sistema de información a medida</option>
+                    <option>Aplicaciones con IA</option>
+                    <option>Otro</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona una opción.</div>
+                </div>
+                <div class="col-12">
+                  <label for="cMensaje" class="form-label">Cuéntanos más</label>
+                  <textarea id="cMensaje" rows="4" class="form-control" required></textarea>
+                  <div class="invalid-feedback">Escribe un breve mensaje.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="cAcepta" required />
+                    <label class="form-check-label small" for="cAcepta">
+                      Acepto la política de tratamiento de datos.
+                    </label>
+                    <div class="invalid-feedback">Debes aceptar para continuar.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-smp-primary btn-lg">
+                    Enviar mensaje <i class="bi bi-send ms-1"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div id="formContactoOk" class="alert alert-success d-none mt-3" role="alert">
+              ¡Mensaje recibido! Te contactaremos en menos de 24 horas.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="smp-contact-info">
+            <h4>Otros canales</h4>
+            <p class="text-muted">¿Prefieres escribirnos directamente? Estos son nuestros canales.</p>
+
+            <a class="smp-contact-row" href="https://wa.me/51964733868?text=Hola%20Guillermo%2C%20me%20interesa%20Strategy%20MP" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+51 964 733 868</span>
+              </div>
+              <i class="bi bi-arrow-up-right ms-auto"></i>
+            </a>
+            <a class="smp-contact-row" href="mailto:guilledu.pg@strategymge.com">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <strong>Correo</strong>
+                <span>guilledu.pg@strategymge.com</span>
+              </div>
+              <i class="bi bi-arrow-up-right ms-auto"></i>
+            </a>
+            <a class="smp-contact-row" href="https://www.linkedin.com/in/guillermopenagarcia/" target="_blank" rel="noopener">
+              <i class="bi bi-linkedin"></i>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>/in/guillermopenagarcia</span>
+              </div>
+              <i class="bi bi-arrow-up-right ms-auto"></i>
+            </a>
+
+            <hr />
+            <h6 class="text-uppercase smp-letter-spaced text-muted small">Horario de atención</h6>
+            <p class="mb-1"><i class="bi bi-clock"></i> Lun a Vie · 9:00 — 19:00 (GMT-5)</p>
+            <p class="mb-0"><i class="bi bi-clock"></i> Sáb · 9:00 — 13:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS RESUMIDOS -->
+  <section class="py-5 smp-section-soft">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="smp-eyebrow">Nuestros servicios</span>
+        <h2 class="smp-h2 mt-2">¿En qué podemos ayudarte?</h2>
+        <p class="text-muted mx-auto" style="max-width:680px;">Cinco líneas de servicio especializadas. Cuéntanos cuál se ajusta a tu necesidad.</p>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <a href="cursos.html#powerbi" class="smp-service-mini">
+            <i class="bi bi-bar-chart-line-fill"></i>
+            <div>
+              <strong>Curso-Taller de Power BI</strong>
+              <span>Capacitación en vivo, individual o in-company.</span>
+            </div>
+            <i class="bi bi-arrow-right ms-auto"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="cursos.html#consultoria-bi" class="smp-service-mini">
+            <i class="bi bi-diagram-3-fill"></i>
+            <div>
+              <strong>Consultoría en BI &amp; Analítica</strong>
+              <span>Data Warehouse, ETL y dashboards estratégicos.</span>
+            </div>
+            <i class="bi bi-arrow-right ms-auto"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="cursos.html#app-movil" class="smp-service-mini">
+            <i class="bi bi-phone-fill"></i>
+            <div>
+              <strong>App móvil fuerza de ventas</strong>
+              <span>Para asesores de negocios en campo.</span>
+            </div>
+            <i class="bi bi-arrow-right ms-auto"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="cursos.html#desarrollo" class="smp-service-mini">
+            <i class="bi bi-code-slash"></i>
+            <div>
+              <strong>Sistemas a medida</strong>
+              <span>Web, APIs y plataformas empresariales.</span>
+            </div>
+            <i class="bi bi-arrow-right ms-auto"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="cursos.html#ia" class="smp-service-mini">
+            <i class="bi bi-cpu-fill"></i>
+            <div>
+              <strong>Aplicaciones con IA</strong>
+              <span>ML, LLMs y modelos predictivos.</span>
+            </div>
+            <i class="bi bi-arrow-right ms-auto"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="smp-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/img/logo.jpeg" alt="Strategy MP" height="40" onerror="this.style.display='none'" />
+            <span class="smp-brand-text text-white">STRATEGY <span class="smp-brand-accent">MP</span></span>
+          </div>
+          <p class="opacity-75">Aprende — Conecta — Crece.</p>
+          <div class="smp-socials">
+            <a href="https://www.linkedin.com/in/guillermopenagarcia/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/51964733868" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:guilledu.pg@strategymge.com" aria-label="Correo"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white">Navegación</h6>
+          <ul class="list-unstyled smp-footer-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cursos.html">Servicios</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h6 class="text-white">Contacto</h6>
+          <ul class="list-unstyled smp-footer-links">
+            <li><i class="bi bi-envelope"></i> guilledu.pg@strategymge.com</li>
+            <li><i class="bi bi-phone"></i> (+51) 964 733 868</li>
+            <li><i class="bi bi-globe"></i> strategymge.com</li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-white">Newsletter</h6>
+          <p class="opacity-75 small">Recibe tips de datos, web y carrera profesional.</p>
+          <form id="formNewsletter" class="d-flex gap-2">
+            <input type="email" class="form-control" placeholder="tu@correo.com" required />
+            <button class="btn btn-smp-primary" type="submit"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="opacity-25 my-4" />
+      <div class="d-flex justify-content-between flex-wrap gap-2 small opacity-75">
+        <span>© <span id="anioActual">2026</span> Strategy MP — Todos los derechos reservados.</span>
+        <span>Hecho con <i class="bi bi-heart-fill text-danger"></i> en Perú.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51964733868" target="_blank" rel="noopener" class="smp-whatsapp-fab" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>
